@@ -5,19 +5,18 @@ on:
     - develop
 jobs:
   run-cijs:
-    runs-on:ubuntu:latest
-  stesps:
-    
+    runs-on: ubuntu:latest
+  stesps:    
   - name: checkout aplication
     uses: actions/checkout@v2
   - name: setup node 
     uses: actions/setup-node@v2
-      with:
-        node-version: "16"
-        - name: Install the requirements
-          run : npm install 
-        - name : Run Tests 
-          run : npm test 
+    with:
+      node-version: "16"
+  - name: Install the requirements
+    run : npm install 
+  - name : Run Tests 
+    run : npm test 
   - name: SonarCloud Scan
     uses: SonarSource/sonarcloud-github-action@master
     env:
