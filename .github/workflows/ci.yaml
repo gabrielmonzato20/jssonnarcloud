@@ -6,7 +6,7 @@ on:
 jobs:
   run-cijs:
     runs-on: ubuntu:latest
-  stesps:    
+  steps:    
   - name: checkout aplication
     uses: actions/checkout@v2
   - name: setup node 
